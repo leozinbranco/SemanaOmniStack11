@@ -11,12 +11,11 @@ import logoImg from '../../assets/logo.png'
 
 
 export default function Detail(){
-    const navigation = useNavigation();
-    const message =  `Olá, ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${incident.value}}`;
     const route = useRoute();
-
     const incident = route.params.incident;
-
+    const navigation = useNavigation();
+    const message =  `Olá, ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${incident.value}`;
+    
 
     function navigateBack() {
         navigation.goBack();
@@ -53,7 +52,7 @@ export default function Detail(){
                         <Text style={styles.incidentProperty}>VALOR:</Text>
 
                         <Text style={styles.incidentValue}>{
-                        Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}.format(incident.value))}
+                        Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(incident.value)}
                 
                         </Text>
 
