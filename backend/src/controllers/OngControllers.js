@@ -18,6 +18,8 @@ module.exports = {
 
     async create(request, response){
                 //requisição e resposta
+
+                
         const {name, email, whatsapp, city, uf} = request.body;  //dados do corpo 
         //console.log(data);
 
